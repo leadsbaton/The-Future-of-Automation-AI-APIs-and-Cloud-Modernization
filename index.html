@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Succeeding with Modern Data Applications</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- White space after navbar -->
+  <div class="h-6"></div>
+
+  <!-- Hero Banner -->
+  <div class="relative w-full">
+    <img src="assets/images/pic 6.png" alt="Banner" class="w-full">
+  </div>
+
+  <!-- Main Container -->
+  <div class="max-w-5xl mx-auto bg-white shadow-md mt-6 p-8 rounded">
+
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-center mb-4 text-gray-800">
+      Succeeding with Modern Data Applications
+    </h1>
+
+    <!-- Register Button -->
+    <div class="flex justify-center mb-6">
+      <button id="registerBtn" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 font-bold rounded">
+        REGISTER NOW
+      </button>
+    </div>
+
+    <!-- Webinar Text -->
+    <div class="text-gray-700 space-y-4 mb-6">
+      <p>
+        Data apps – from in-product dashboards to recommendation engines – are essential for driving
+        data-informed decisions across organizations. They help users quickly extract key trends,
+        insights, and actions from massive datasets, improving productivity, operational efficiency,
+        and innovation.
+      </p>
+      <p>
+        However, building effective data apps isn't easy.
+        <span class="font-semibold">Beyond handling large-scale data processing, apps must be fast,
+          often delivering real-time or near-real-time insights.</span> They also need to support
+        high concurrency, serving many users and requests simultaneously. Integration and governance
+        are critical too; data must be accurate, timely, and well-managed. Legacy systems, data silos,
+        and poor data quality can all be obstacles to success.
+      </p>
+      <p>
+        To highlight key technologies, tools, and best practices for building modern data apps, DBTA is
+        hosting a special <span class="font-semibold">roundtable webinar on August 28th.</span>
+      </p>
+      <p class="font-semibold">
+        Don't miss this live event on <span class="font-bold">Thursday, August 28th, 11 AM PT / 2 PM ET.</span>
+      </p>
+      <p>
+        <span class="text-red-600 font-bold cursor-pointer hover:underline" id="registerText">REGISTER NOW</span>
+        to attend the webinar <span class="font-semibold">Succeeding with Modern Data Applications.</span>
+      </p>
+    </div>
+
+    <!-- Speakers + Moderator -->
+    <div class="mt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+
+        <!-- Speaker 1 -->
+        <div>
+          <span class="text-red-600 font-bold text-xs block mb-2">SPEAKER</span>
+          <img src="assets/images/pic 1.png" alt="Speaker" class="w-24 h-24 mx-auto rounded-full border mb-3">
+          <p class="font-semibold">Tyler Mitchell</p>
+          <p class="text-sm text-gray-600">Senior Product Marketing Manager<br>Couchbase</p>
+        </div>
+
+        <!-- Speaker 2 -->
+        <div>
+          <span class="block mb-2 invisible">.</span>
+          <img src="assets/images/pic 2.png" alt="Speaker" class="w-24 h-24 mx-auto rounded-full border mb-3">
+          <p class="font-semibold">Ripudaman Singh</p>
+          <p class="text-sm text-gray-600">Principal Product Manager<br>Informatica</p>
+        </div>
+
+        <!-- Speaker 3 -->
+        <div>
+          <span class="block mb-2 invisible">.</span>
+          <img src="assets/images/pic 3.png" alt="Speaker" class="w-24 h-24 mx-auto rounded-full border mb-3">
+          <p class="font-semibold">Stephane Castellani</p>
+          <p class="text-sm text-gray-600">SVP Marketing<br>CrateDB</p>
+        </div>
+
+        <!-- Speaker 4 -->
+        <div>
+          <span class="block mb-2 invisible">.</span>
+          <img src="assets/images/pic 4.png" alt="Speaker" class="w-24 h-24 mx-auto rounded-full border mb-3">
+          <p class="font-semibold">Kevin Kline</p>
+          <p class="text-sm text-gray-600">Technical Evangelist<br>SolarWinds</p>
+        </div>
+
+        <!-- Moderator -->
+        <div>
+          <span class="text-red-400 font-semibold text-xs block mb-2">MODERATOR</span>
+          <img src="assets/images/pic 5.png" alt="Moderator" class="w-24 h-24 mx-auto rounded-full border mb-3">
+          <p class="font-semibold">Stephen Faig</p>
+          <p class="text-sm text-gray-600">Research Director<br>Unisphere Research and DBTA</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- JS -->
+  <script>
+    // Load navbar and footer
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+
+    // Register Now actions
+    function goRegister() {
+      window.open('register.html', '_blank');
+    }
+
+    document.getElementById('registerBtn').addEventListener('click', goRegister);
+    document.getElementById('registerText').addEventListener('click', goRegister);
+  </script>
+
+</body>
+
+</html>
